@@ -133,46 +133,84 @@ completamente díspares - isso porque são de diferentes tipos de dados.
 
 Observe os comportamentos exibidos a seguir.
 
-Se fizermos
+Se tivermos o seguinte programa, o que ocorrerá durante sua execução?
 
 ```python
-print(5)
+# Arquivo: tristeza.py
+print("A vida castiga cada dia mais" - " e o salário só diminui.")
 ```
 
-Ou:
+<img src="https://github.com/Neblinus/Python-LBTM/blob/1f3540b9589fcfbec98affcebbe3d1261e926846/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Tristeza.png" alt="Programa que tenta usar o operador de subtração entre strings.">
+
+Podemos perceber que o interpretador encontrou um erro, explícito na linha `TypeError` - ou seja, um erro referente ao
+_tipo_ dos dados utilizados. 
+
+O que causou o erro? Bem...
+
+Para nossa decepção, o nível de infelicidade exibido nessas strings não altera o comportamento do interpretador Python.<br>
+O que ocorre é que o operador de subtração (`-`), que havíamos utilizado comsucesso, há apenas alguns momentos, no teste com
+números, não pode ser utilizado em strings, porquê esse _tipo de dado_ não o suporta.
+
+Para definir isso, analisemos como a linguagem determina esses tipos.
+
+---
+
+### 'Não faz o meu tipo' - ou onde o filho chora e a mãe não vê
+Talvez sua cabeça comece a girar agora, por isso, vou dar algumas definições técnicas da forma mais rápida
+o possível, para então explicá-las em termos simples. Descanse tranquilo sabendo que logo você entenderá o
+significado completo dessas definições (mas não hoje, ainda).
+
+Em Python, tanto as strings que vimos como os números são _objetos_, ou seja, um identificador (ID) associado a uma região de
+memória RAM no _heap_ contendo um valor atribuído a si, sendo instâncias de uma classe padrão da linguagem ou definida pelo
+usuário.
+
+~~Uau. Sim. Até o português pode ser ininteligível.~~
+
+Vamos lá.<br>
+Em termos de bioquímica e biologia, temos um material genético que armazena informações usadas para todos os processos do
+nosso organismo (DNA). Dentre essas informações, acessamos genes específicos para, por exemplo, construir proteínas através
+da síntese proteica, em que um códon será correspondente a um determinado aminoácido.
+
+Paramos aqui.<br>
+Tanto os números quanto as strings que vimos são como aminoácidos, que correspondem a um códon - uma _**classe**_ -
+específico, que determina quais interações podemos ter com esses objetos. 
+
+A _**classe**_ do objeto - seja ele um número, uma string ou outros mais que veremos pela frente - é o seu 'tipo'.
+
+Deixando de lado as minhas péssimas analogias, vejamos como isso se dá em Python.<br>
+Veja o seguinte programa:
 
 ```python
-print("5")
+# Arquivo: tipos.py
+print(type("Olá, mundo!))
+print(class(10))
 ```
 
-Não parece provocar diferenças.<br>
-Sob execução, os dois códigos produzem o mesmo resultado final: o número 5 que conhecemos é impresso na tela.
+Não se intimide com os termos desconhecidos. Estamos apenas instruindo o interpretador a imprimir os tipos (veja o
+termo `type`) dessa string e desse número.<br>
+Foque na saída do programa:
 
-Mas repare: o tom de cor usado para realçar os dois literais são _levemente desiguais_.
+<img src="https://github.com/Neblinus/Python-LBTM/blob/b8cc5da8326a5451b46f5eb331551f4fb5aaf192/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Tipos.png" alt="Programa Python demonstrando tipos">
 
-A justificativa para tal é essa:<br>
-* `5` é um literal de número inteiro, ou seja, seu _tipo_, em Python, é `int`, recebendo uma cor levemente mais escura
-* `"5"` é um literal de _string_, ou seja, seu _tipo_, em Python, é `str`, recebendo uma cor levemente mais clara
+O que vemos aqui são os tipos, as _**classes**_ da nossa string e do nosso número.
 
+O que o programa nos diz é que o _tipo_, a _classe_ da nossa string é `str`, ou seja: na linguagem Python, há um
+tipo, uma classe - um códon - que configura, determina - codifica - objetos (aminoácidos) do tipo `str` (string), que
+representam sequências de caracteres.
+
+De mesmo modo, na linguagem, há um tipo, uma classe - um códon - que configura, determina - codifica - objetos
+(aminoácidos) do tipo `int` (do inglês _integer_, ou seja, 'inteiro'), que representam números inteiros, sem parte
+fracionária.
 
 > [!TIP]
-> <details>
->  <summary>O que é uma <em>string</em>?</summary>
->
->  _String_ é um termo da área para designar uma sequência de caracteres.
->
->  Considerando que _string_, em inglês, denomina algo como 'cordão' ou 'barbante', pode-se visualizar um literal de
->  _string_ qualquer como um conjunto de caracteres _ligado_ entre si por 'cordões' ou 'barbantes'.
->
->  Por exemplo:<br>
->  O literal `"Bom dia"` pode ser visto como `B_o_m_ _d_i_a`, em que cada `_` pode ser entendido como um 'cordão',<br>
->  ligando os caracteres entre si.
->
->  E _sim_, o espaço entre as duas palavras _é_ um caractere.<br>
->  Mas deixemos isso para depois.
-> </details>
+> Números com parte fracionária são 'números com vírgula'.
+> Por exemplo, se você oferece seu picolé, por educação, a um amigo, e ele devora metade do seu picolé, você é deixado com
+> 0,5 picolé (meio picolé) - e com raiva dele, talvez, se fossem seus últimos R$4,00 para picolé.
+> Já números inteiros não têm parte fracionária, por isso o tipo `int`, 'inteiro'.
 
-Mas, se a diferença é, aparentemente, significativa, porquê há tão baixa indicação visual disso?
+Finalizando o conceito de tipos de dados, que será extensamente abordado nas próximas aulas, você só precisa se lembrar que,
+em Python, tudo tem um tipo de dado específico, uma classe própria, que irá determinar o que pode ser feito com esse algo e
+como ele interage com o programa.
 
 ---
 
