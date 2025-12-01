@@ -121,10 +121,12 @@ Naturalmente, a saída desse programa é:
 
 <img src="https://github.com/Neblinus/Python-LBTM/blob/1f6704cff122936067ddd0bae03c7602a4c8a78c/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Numeros.png" alt="Programa demonstrando soma e subtração em Python">
 
-Aqui, o interpretador Python também utilizou a definição de soma - representada no operador `+` - para nos trazer o
-resultado das operações; dessa vez, porém, em se tratando de números.
+Aqui, o interpretador Python também utilizou a definição de soma - representada no operador `+` - e também de subtração
+(operador `-`) para nos trazer o resultado das operações; dessa vez, porém, em se tratando de números.
 
 A partir desses exemplos, podemos ir ao ponto central da definição de tipos de dados.
+
+---
 
 ### Onde os dados se desencontram
 
@@ -148,7 +150,7 @@ _tipo_ dos dados utilizados.
 O que causou o erro? Bem...
 
 Para nossa decepção, o nível de infelicidade exibido nessas strings não altera o comportamento do interpretador Python.<br>
-O que ocorre é que o operador de subtração (`-`), que havíamos utilizado comsucesso, há apenas alguns momentos, no teste com
+O que ocorre é que o operador de subtração (`-`), que havíamos utilizado com sucesso há apenas alguns momentos, no teste com
 números, não pode ser utilizado em strings, porquê esse _tipo de dado_ não o suporta.
 
 Para definir isso, analisemos como a linguagem determina esses tipos.
