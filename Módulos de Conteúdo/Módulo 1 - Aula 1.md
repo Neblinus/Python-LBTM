@@ -1,23 +1,28 @@
-# Módulo 1 - Lição 1.2 - Literais, Tipos de Dados, Variáveis
-Na última lição, tivemos um breve primeiro contato com a linguagem _Python_, explorando superficialmente alguns detalhes
+# Módulo 1 - Aula 1 - Tipos de Dados e Variáveis
+Na primeira aula, tivemos um breve primeiro contato com a linguagem _Python_, explorando superficialmente alguns detalhes
 sobre ela.
 
-Mas se você saiu da última lição com a sensação de que não aprendeu nada, fique tranquilo:<br>
-Você terá _inúmeros aprendizados_ nessa lição.
-
-Prepare-se.<br>
-Cabeças podem <s>rolar</s> se confundir ;)
+Mas se você saiu com a sensação de que não aprendeu nada, fique tranquilo:<br>
+O conteúdo aqui descrito deve lhe dar uma visão mais clara sobre o conteúdo abordado.
 
 ## Literais
-Vamos revisitar o programa da última lição rapidamente:
+Vamos revisitar um programa exibido na última aula rapidamente, agora alterado para o português:
 
 ```python
-# Arquivo: ola_mundo.py
+# Arquivo: intro.py
 print("Olá, mundo!")
 ```
 
 Se você bem se recorda, esse programa apenas imprime (ou _exibe_, de certa forma, para simplificar) o texto `Olá, mundo!` na saída do
 console, parecendo, desse modo, pouco útil para nós.
+
+Veja a saída do programa:
+
+
+
+> [!NOTE]
+> Não se preocupe agora com jargões específicos da área da programação; eles serão explicados ao longo das aulas.
+> Por agora, entenda o _console_ como uma janela de um aplicativo em que podemos digitar comandos.
 
 Mas nas entrelinhas desse código tão simples, teremos nosso primeiro aprendizado efetivo:<br>
 Compreenderemos o que são os _literais_.
@@ -25,11 +30,16 @@ Compreenderemos o que são os _literais_.
 ---
 
 ### Literais por toda a parte
-Olhe mais atentamente para o código do programa, especificamente, a única linha a ser executada (lembre-se que linhas iniciadas em 
-`#` são _comentários_ e são ignoradas pelo interpretador Python):<br>
+Olhe mais atentamente para o código do programa; você verá uma linha acinzentada e uma outra linha com diferentes colorizações.
+A linha acinzentada, iniciada em `#`, demarca um _comentário_, ou seja, um trecho do arquivo de código-fonte que será ignorado pelo
+interpretador Python - o software que nos permite executar ('rodar') os programas que desenvolvemos.
+
+Por serem ignorados, os comentários são usados para explicar ou tornar mais claro um trecho de código, mas falaremos disso em outro
+momento.
+
+Por agora, foque nessa linha em específico:
 
 ```python
-# Arquivo: ola_mundo.py
 print("Olá, mundo!")
 ```
 
