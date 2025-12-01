@@ -1,11 +1,11 @@
-# Módulo 1 - Aula 1 - Tipos de Dados e Variáveis
+# Módulo 1 - Aula 1 - Tipos de Dados, Literais e Variáveis
 Na primeira aula, tivemos um breve primeiro contato com a linguagem _Python_, explorando superficialmente alguns detalhes
 sobre ela.
 
 Mas se você saiu com a sensação de que não aprendeu nada, fique tranquilo:<br>
 O conteúdo aqui descrito deve lhe dar uma visão mais clara sobre o conteúdo abordado.
 
-## Literais
+## Tipos de Dados
 Vamos revisitar um programa exibido na última aula rapidamente, agora alterado para o português:
 
 ```python
@@ -18,16 +18,168 @@ console, parecendo, desse modo, pouco útil para nós.
 
 Veja a saída do programa:
 
-
+<img src="https://github.com/Neblinus/Python-LBTM/blob/f7810d7300cf9480459d1b262ac0ad8d26a94120/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/HelloWorld.png" alt="Console exibindo a saída 'Olá, mundo!' de um programa Python">
 
 > [!NOTE]
 > Não se preocupe agora com jargões específicos da área da programação; eles serão explicados ao longo das aulas.
 > Por agora, entenda o _console_ como uma janela de um aplicativo em que podemos digitar comandos.
 
 Mas nas entrelinhas desse código tão simples, teremos nosso primeiro aprendizado efetivo:<br>
-Compreenderemos o que são os _literais_.
+Compreenderemos o que são os _tipos de dados_.
+
+## Tipos de Dados
+O que ocorre é que, em computação, lidamos o tempo todo com dados: abrimos uma planilha `.xlsx` no Excel com vários
+números, editamos um documento `.docx` no Word repleto de palavras, ouvimos um áudio `.mp3` de uma música no celular...
+
+Em todos esses exemplos, e na verdade, sempre que estamos _usando_ qualquer dispositivo que contenha uma placa eletrônica
+com algum chip, estamos lidando com dados.
+
+E esses dados possuem diferentes tipos, afinal, faria sentido, por exemplo, tratar uma batata-doce como um ovo?<br>
+Ou um pedaço de ferro como um bolo?
+
+São analogias esdrúxulas, mas que servem para mostrar que, assim como nós lidamos com os objetos e itens do dia a dia de
+acordo com suas _categorias_, sistemas eletrônicos e programáveis o fazem pelos seus _tipos de dados_.
+
+Desse modo, vamos entender e explorar essas definições.
 
 ---
+
+### Dados específicos, com especificação
+Python, assim como qualquer linguagem de programação, lida com seja lá quais forem os dados com que estamos trabalhando através
+de seus tipos. Mas o que seria um _tipo_?
+
+Vamos retomar o programa do início da aula, focando nessa linha:
+
+```python
+print("Olá, mundo!")
+```
+
+Nessa linha de código, temos a frase `"Olá, mundo!"`, e ela, surpreendentemente, representa um tipo de dado.
+Em termos técnicos, na linguagem Python, uma sequência de caracteres - letras, números, etc - entre aspas simples
+`''` ou duplas `""` é considerado uma **_string_**.
+
+> [!TIP]
+> <details>
+>  <summary>Me explique melhor</summary>
+>
+>  <strong><em>string</em></strong> é um termo da área para designar uma sequência de caracteres.
+>
+>  Considerando que _string_, em inglês, denomina algo como 'cordão' ou 'barbante', pode-se visualizar uma
+>  _string_ qualquer como um conjunto de caracteres _ligado_ entre si por 'cordões' ou 'barbantes'.
+>
+>  Por exemplo:<br>
+>  `"Bom dia"` pode ser visto como `B_o_m_ _d_i_a`, em que cada `_` pode ser entendido como um 'cordão',<br>
+>  ligando os caracteres entre si.
+>
+>  E _sim_, o espaço entre as duas palavras _é_ um caractere.<br>
+>  Mas deixemos isso para depois.
+> </details>
+
+Essa categorização define como a linguagem irá interagir com os dados que fornecemos - assim como, por exemplo, nós lidamos com
+um rato de laboratório de forma diferente da qual usamos em relação a uma bactéria patogênica.
+
+Vamos a alguns exemplos.
+
+---
+
+### Testando tipos de dados
+Para testar o impacto dos tipos de dados no funcionamento da linguagem, vamos tentar fazer algumas operações.<br>
+Não se preocupe com os detalhes desconhecidos por agora; eles serão explicados nas próximas aulas.
+
+Em Python, podemos realizar operações diversas e que seriam comuns para nós.
+
+Por exemplo, poderíamos juntar duas _*strings*_, ou seja, duas sequências de caracteres, assim como juntamos frases
+ou sílabas para formar textos e palavras, usando o operador de soma (`+`):
+
+```python
+# Arquivo: frases.py
+print("Eu sou uma frase")
+print("Eu sou uma frase" + " e eu sou outra!")
+```
+
+Ao executar esse programa, teremos:
+
+<img src="https://github.com/Neblinus/Python-LBTM/blob/c1897b8d22556e49a30e9c80cf72fe198c852bab/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Frases.png" alt="Programa mostrando duas frases sendo concatenadas em Python">
+
+Como podemos ver, na segunda saída do comando `print`, as strings foram unidas - mais à frente, veremos que o termo certo
+seria 'concatenadas'.
+
+Interpretando essa saída sobre a ótica dos tipos de dados, podemos dizer que o interpretador Python - o software que executa
+nosso código - usou o operador de soma (`+`) para realizar uma 'soma' de acordo com a definição do que seria 'somar' para
+strings.<br>
+Sendo elas sequências de caracteres, faz sentido juntá-las.
+
+Vejamos algo semelhante, agora, com números:
+
+```python
+# Arquivo: numeros.py
+print(5 + 5)
+print(5 + 5 - 2)
+```
+
+Naturalmente, a saída desse programa é:
+
+<img src="https://github.com/Neblinus/Python-LBTM/blob/1f6704cff122936067ddd0bae03c7602a4c8a78c/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Numeros.png" alt="Programa demonstrando soma e subtração em Python">
+
+Aqui, o interpretador Python também utilizou a definição de soma - representada no operador `+` - para nos trazer o
+resultado das operações; dessa vez, porém, em se tratando de números.
+
+A partir desses exemplos, podemos ir ao ponto central da definição de tipos de dados.
+
+### Onde os dados se desencontram
+
+Embora, para os iniciantes, isso nem sempre esteja aparente, as strings e os números que vimos acima têm significados
+completamente díspares - isso porque são de diferentes tipos de dados.
+
+Observe os comportamentos exibidos a seguir.
+
+Se fizermos
+
+```python
+print(5)
+```
+
+Ou:
+
+```python
+print("5")
+```
+
+Não parece provocar diferenças.<br>
+Sob execução, os dois códigos produzem o mesmo resultado final: o número 5 que conhecemos é impresso na tela.
+
+Mas repare: o tom de cor usado para realçar os dois literais são _levemente desiguais_.
+
+A justificativa para tal é essa:<br>
+* `5` é um literal de número inteiro, ou seja, seu _tipo_, em Python, é `int`, recebendo uma cor levemente mais escura
+* `"5"` é um literal de _string_, ou seja, seu _tipo_, em Python, é `str`, recebendo uma cor levemente mais clara
+
+
+> [!TIP]
+> <details>
+>  <summary>O que é uma <em>string</em>?</summary>
+>
+>  _String_ é um termo da área para designar uma sequência de caracteres.
+>
+>  Considerando que _string_, em inglês, denomina algo como 'cordão' ou 'barbante', pode-se visualizar um literal de
+>  _string_ qualquer como um conjunto de caracteres _ligado_ entre si por 'cordões' ou 'barbantes'.
+>
+>  Por exemplo:<br>
+>  O literal `"Bom dia"` pode ser visto como `B_o_m_ _d_i_a`, em que cada `_` pode ser entendido como um 'cordão',<br>
+>  ligando os caracteres entre si.
+>
+>  E _sim_, o espaço entre as duas palavras _é_ um caractere.<br>
+>  Mas deixemos isso para depois.
+> </details>
+
+Mas, se a diferença é, aparentemente, significativa, porquê há tão baixa indicação visual disso?
+
+---
+
+### A especificação que faltava
+O que ocorre é que Python é uma linguagem de _tipagem dinâmica_.<br>
+Isso significa que os literais 
+
 
 ### Literais por toda a parte
 Olhe mais atentamente para o código do programa; você verá uma linha acinzentada e uma outra linha com diferentes colorizações.
@@ -51,7 +203,7 @@ Essa pequena frase entre aspas duplas é um **_literal_**.<br>
 Em programação, um **_literal_** é qualquer valor 'puro' diretamente escrito no código-fonte.
 
 No nosso simples programa, temos apenas um literal: `"Olá, mundo!"` - um valor diretamente escrito no código-fonte.<br>
-Apenas isso: valores diretamente escritos no código-fonte.
+Retomando: literais são valores diretamente escritos no código-fonte.
 
 Ou seja, se tivermos um arquivo Python assim:
 
@@ -166,72 +318,3 @@ _Não se assuste, apenas ignore a última._
 
 O que acontece é que (_rufem os tambores_) `5` ou `"5"` são, ambos, literais.<br>
 Mas são literais de _diferentes tipos_.
-
-## Tipos de Dados
-O que ocorre é que, em computação, lidamos o tempo todo com dados: abrimos uma planilha `.xlsx` no Excel com vários
-números, editamos um documento `.docx` no Word repleto de palavras, ouvimos um áudio `.mp3` de uma música no celular...
-
-Em todos esses exemplos, e na verdade, sempre que estamos _usando_ qualquer dispositivo que contenha uma placa eletrônica
-com algum chip, estamos lidando com dados.
-
-E esses dados possuem diferentes tipos, afinal, faria sentido, por exemplo, tratar uma batata-doce como um ovo?<br>
-Ou um pedaço de ferro como um bolo?
-
-São analogias esdrúxulas, mas que servem para mostrar que, assim como nós lidamos com os objetos e itens do dia a dia de
-acordo com seus _tipos_, sistemas eletrônicos e programáveis o fazem pelos seus _tipos de dados_.
-
-Desse modo, vamos entender e explorar essas definições.
-
----
-
-### Dados específicos, sem especificação
-Como havia dito, um literal `5` e outro literal `"5"` são ambos, literais, mas de diferentes tipos de dados.
-
-Embora, para os iniciantes, isso não esteja aparente.
-
-Por exemplo, digitar:
-
-```python
-print(5)
-```
-
-Ou:
-
-```python
-print("5")
-```
-
-Não parece provocar diferenças.<br>
-Sob execução, os dois códigos produzem o mesmo resultado final: o número 5 que conhecemos é impresso na tela.
-
-Mas repare: o tom de cor usado para realçar os dois literais são _levemente desiguais_.
-
-A justificativa para tal é essa:<br>
-* `5` é um literal de número inteiro, ou seja, seu _tipo_, em Python, é `int`, recebendo uma cor levemente mais escura
-* `"5"` é um literal de _string_, ou seja, seu _tipo_, em Python, é `str`, recebendo uma cor levemente mais clara
-
-
-> [!TIP]
-> <details>
->  <summary>O que é uma <em>string</em>?</summary>
->
->  _String_ é um termo da área para designar uma sequência de caracteres.
->
->  Considerando que _string_, em inglês, denomina algo como 'cordão' ou 'barbante', pode-se visualizar um literal de
->  _string_ qualquer como um conjunto de caracteres _ligado_ entre si por 'cordões' ou 'barbantes'.
->
->  Por exemplo:<br>
->  O literal `"Bom dia"` pode ser visto como `B_o_m_ _d_i_a`, em que cada `_` pode ser entendido como um 'cordão',<br>
->  ligando os caracteres entre si.
->
->  E _sim_, o espaço entre as duas palavras _é_ um caractere.<br>
->  Mas deixemos isso para depois.
-> </details>
-
-Mas, se a diferença é, aparentemente, significativa, porquê há tão baixa indicação visual disso?
-
----
-
-### A especificação que faltava
-O que ocorre é que Python é uma linguagem de _tipagem dinâmica_.<br>
-Isso significa que os literais 
