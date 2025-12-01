@@ -185,7 +185,7 @@ Veja o seguinte programa:
 ```python
 # Arquivo: tipos.py
 print(type("Olá, mundo!))
-print(class(10))
+print(type(10))
 ```
 
 Não se intimide com os termos desconhecidos. Estamos apenas instruindo o interpretador a imprimir os tipos (veja o
