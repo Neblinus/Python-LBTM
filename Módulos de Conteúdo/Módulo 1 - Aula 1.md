@@ -162,8 +162,8 @@ Talvez sua cabeça comece a girar agora, por isso, vou dar algumas definições 
 o possível, para então explicá-las em termos simples. Descanse tranquilo sabendo que logo você entenderá o
 significado completo dessas definições (mas não hoje, ainda).
 
-Em Python, tanto as strings que vimos como os números são _objetos_, ou seja, um identificador (ID) associado a uma região de
-memória RAM no _heap_ contendo um valor atribuído a si, sendo instâncias de uma classe padrão da linguagem ou definida pelo
+Em Python, tanto as strings que vimos como os números são _objetos_, ou seja, um identificador (ID) associado a um endereço
+de memória RAM no _heap_ contendo um valor atribuído a si, sendo instâncias de uma classe padrão da linguagem ou definida pelo
 usuário.
 
 ~~Uau. Sim. Até o português pode ser ininteligível.~~
@@ -214,7 +214,47 @@ Finalizando o conceito de tipos de dados, que será extensamente abordado nas pr
 em Python, tudo tem um tipo de dado específico, uma classe própria, que irá determinar o que pode ser feito com esse algo e
 como ele interage com o programa.
 
+Vamos avançar agora para um novo conceito.
+
+## Literais e Variáveis
+Abordarei os coneceitos de _literais_ e _variáveis_ juntos, uma vez que separá-los tornaria mais difícil sua compreensão.<br>
+Dito isso, iniciemos esta última etapa da aula.
+
+Àqueles que nunca interagiram com a área da programação antes, um detalhe pode ter passado despercebido em meio aos exemplos;
+retomemos ele a seguir:
+
+```python
+# Arquivo: frases.py
+print("Eu sou uma frase")
+print("Eu sou uma frase" + " e eu sou outra!")
+```
+
+Nesse momento, o resultado do programa não é relevante.<br>
+Reflita apenas sobre uma minúcia: _porquê digitamos `"Eu sou uma frase"` duas vezes?_
+
+Será que não poderíamos arranjar uma forma de evitar fazer o trabalho dobrado?<br>
+Qual seria a razão dessa repetição?
+
+A resposta é simples: não temos nenhuma forma de instruir o programa a usar essa frase _outra vez_.
+
 ---
+
+### A especificação que faltava
+Até esse momento, em todos os exemplos que vimos, usávamos `print` com algum valor entre parênteses:
+
+```python
+print("Olá, mundo!")
+print(5 + 5)
+print(5 + 5 - 2)
+# Etc, etc, etc
+```
+
+E o programa imprimia - exibia - o valor entre parênteses, ou o resultado do cálculo - na tela do console.
+
+Ocorre que, a esses valores que inseríamos entre os parênteses, chamamos _**literais**_.
+
+Um _**literal**_ é qualquer valor que inserimos diretamente no código-fonte e que pode ser atribuído a uma variável
+(veremos logo em seguida sobre elas).
 
 ### A especificação que faltava
 O que ocorre é que Python é uma linguagem de _tipagem dinâmica_.<br>
