@@ -394,101 +394,82 @@ Nesse programa, temos a lógica básica das variáveis em funcionamento:
 * Inserimos o _operador de atribuição_, um símbolo de 'igual' (`=`)
 * Inserimos o valor a ser atribuído a `meu_numero_favorito`, nesse caso, `7`
 
+Assim, temos que o interpretador Python selecionou uma região da memória e associou-a ao identificador
+`meu_numero_favorito`, e logo após, realizou a operação definida pelo operador de atribuição (`=`), ou
+seja, tomar um valor à sua direita (nesse caso, o literal de tipo `int` `7`) e atribuí-lo à variável à
+esquerda.
 
+Desse ponto em diante, todas as vezes que o programa tiver `meu_numero_favorito` inserido em algum trecho
+de código, ele acessará seu valor e obterá, nesse cenário, o `int` `7` (ou algum outro valor, caso a variável
+tenha sido atribuída a algo diferente ao longo do programa...mas isso, deixemos para depois).
 
-## Variáveis
-Até agora, só vimos literais em ação.<br>
-Para entender o que são variáveis, analise o código abaixo comigo (que, propositalmente, contém um erro).<br>
-Não se preocupe em entender o que é `input` agora, apenas siga o fluxo comigo:
+Voltando ao exemplo dos abacates, teríamos a versão melhorada assim:
 
 ```python
-# Arquivo: bom_dia_usuario.py
-input("Qual o seu nome? ")
-print("Bom dia, nome!!")
+# Arquivo: abacate.py
+frase_repetida = "Eu planto abacates."
+print(frase_repetida)
+print(frase_repetida)
+print(frase_repetida)
+print(frase_repetida)
+print(frase_repetida)
 ```
 
-Nesse código-fonte, embora vocês ainda não tenham aprendido, temos uma função `input` que, ao ser executada, vai exibir o literal<br>
-`"Qual o seu nome? "` no console e aguardar por uma entrada de caracteres, aceita quando o usuário apertar a tecla _Enter_.
+E como resultado:
 
-Quando o usuário pressionar _Enter_, a função aceitará a entrada de caracteres dele, para que então possamos imprimir seu nome no
-`print`.
-
-_Exceto_ pelo fato de que o programa **_não_** imprime o nome do usuário.
-
----
-
-### Nomes e denominações
-Tente executar o programa acima, caso esteja curioso.<br>
-Você se deparará com a seguinte saída no console:
-
-```
->>> Qual o seu nome? <Carlos>
->>> Bom dia, nome!!
-```
+<img src="https://github.com/Neblinus/Python-LBTM/blob/47a8f1c44af303974cdbc4525cf2c6daf6e0843c/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Abacate.png" alt="Programa Python demonstrando variáveis">
 
 > [!NOTE]
-> Aqui estarei usando como convenção:<br>
-> * O símbolo `>>>` para indicar uma saída de caracteres do console.
-> * Os símbolos `<` e `>` ao redor de texto insierido no console por alguém.
+> Ainda veremos como nos livrar da repetição de `print`s.<br>
+> Para os curiosos, tem a ver com loops...
 
-Perfeito, não?<br>
-_Porquê isso acontece?_, você deve estar se perguntando...
-
-Por duas razões, mas vamos à primeira:<br>
-`"Bom dia, nome!!"` é um literal, ou seja, um valor diretamente inserido no código-fonte - `nome` não representa o nome do usuário,
-é apenas uma parte do literal que inserimos no código.
-
-Já a segunda requer mais conhecimento para ser notada...
-Onde o _Carlos_ foi parar?<br>
-Ele foi aceito pela função `input`, então, onde ele está?
+E assim, concluímos a primeira aula.<br>
+Esses tópicos todos serão ainda largamente abordardos ao decorrer das aulas, junto a muitos outros que iremos
+aprender.
 
 ---
 
-### Onde entram as expressões
-Expressões e _statements_ são tópicos que quero abordar futuramente, mas cujo entendimento superficial auxiliará a compreensão
-de variáveis.
+#### Um pequeno adendo
+Isso ainda será explicado futuramente em detalhes, mas para quem quiser saber, em programação, temos linguagens
+de tipagem estática e dinâmica.
 
-* Expressões são trechos de código que _retornam um valor_.
-  Em Python, por exemplo, `5 + 3` retorna o valor `8`.
-* Um _statement_ é uma linha de código que performa uma ação ou um (ou mais) 'comandos' (tais como execução de funções) 
+Linguagens de tipagem estática tem funcionamento organizado de modo que as variáveis não possam mudar de tipo ao
+longo da execução do programa, por meio de declarações explícitas e checagens do compilador, dentre outros mecanismos.
 
+Por exemplo, numa linguagem estática como Java:
 
-### Alterando com literais, literalmente
-Sabemos teoricamente o que é um literal, então, que tal abranger mais esse conceito e explorar suas implicações na prática?<br>
-Abra o arquivo `ola_mundo.py` que temos usado até aqui e tente substituir o literal `"Olá, mundo!"` por outro literal qualquer.
+```java
+public class OlaMundo
+{
+  public static void main(String[] args)
+  {
+    String saudacao = "Olá, mundo!";
+    System.out.println(saudacao);
+  }
+}
+```
 
-Sim, exatamente isso que passou pela sua mente: _como assim?_<br>
-Acalme-se, jovem.
+Não se preocupe em entender essa linguagem; ela não é nosso foco.<br>
+O programa acima define uma variável do tipo `String` (note a linha iniciando em `String`), com um literal
+atribuído a ela (`"Olá, mundo!"`), e imprime seu valor na tela.
 
-Apenas delete o literal e coloque outro no lugar.<br>
-Uma frase, um número, o que desejar: apenas digite o que quiser, e veja as mudanças provocadas por essa alteração quando executar o
-programa.
+Uma vez declarada, a variável `saudacao` não poderá mudar de tipo: só poderá armazenar strings.
 
-> [!TIP]
-> Caso você não se recorde:<br>
-> Para executar um programa através de IDEs populares, basta localizar o botão _Executar_ ou _Run_.<br>
-> Para executar um programa através da linha de comando, basta digitar `python3 <nome_do_arquivo>` e apertar _Enter_.
+Compare com a versão em Python desse programa:
 
-A depender do que você inseriu, o literal terá sido exibido, _impresso_ na tela.<br>
-Ou você será agraciado com uma mensagem de erro.
+```python
+saudacao = "Olá, mundo!"
+print(saudacao)
+```
 
-Em caso de erro, apenas deixe-o de lado por enquanto, e mantenha-se atento.
+Como podemos notar, não há, por exemplo, uma declaração `str` antes do nome da variável `saudacao`.<br>
+Isso ocorre porque Python possui tipagem dinâmica, ou seja, o tipo da variável pode, sim, mudar durante a
+execução do programa.
 
----
+As implicações de cada abordagem discutiremos mais à frente; por ora, saiba que tipagem estática e dinâmica
+existem!
 
-### Um literal no meu console
-Vamos supor, por exemplo, que no lugar do nosso literal `"Olá, mundo!"` você tenha inserido o número 5.<br>
-Muito provavelmente, o número 5 terá sido exibido em sua tela.
+> [!NOTE]
+> Falaremos mais à frente sobre inferência de tipos também.
 
-Mas, o que ele é, exatamente?<br>
-Você já sabe a resposta: um **_literal_**.
-
-Porém, como você inseriu o número 5?<br>
-* `5`
-* `"5"` ou `'5'`
-* `"\u0035"`
-
-_Não se assuste, apenas ignore a última._
-
-O que acontece é que (_rufem os tambores_) `5` ou `"5"` são, ambos, literais.<br>
-Mas são literais de _diferentes tipos_.
+**Obrigado por ter lido, até a próxima!**
