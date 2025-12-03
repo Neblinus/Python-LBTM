@@ -162,7 +162,7 @@ Talvez sua cabeça comece a girar agora, por isso, vou dar algumas definições 
 o possível, para então explicá-las em termos simples. Descanse tranquilo sabendo que logo você entenderá o
 significado completo dessas definições (mas não hoje, ainda).
 
-Em Python, tanto as strings que vimos como os números são _objetos_, ou seja, um identificador (ID) associado a um endereço
+Em Python, tanto as strings que vimos como os números são _objetos_, ou seja, um identificador (ID) interno associado a um endereço
 de memória RAM no _heap_ contendo um valor atribuído a si, sendo instâncias de uma classe padrão da linguagem ou definida pelo
 usuário.
 
@@ -326,13 +326,75 @@ Até como pesquisadores, é difícil, muitas vezes, não se deixar levar pelo en
 uma ideia, e acabar por criar uma solução à procura de um problema.
 
 Suponhamos que quiséssemos escrever um programa que imprimisse a frase _"Eu planto abacates"_ não 50,
-mas 5 vezes - para fins de brevidade.
+mas 5 vezes - para fins de brevidade.<br>
+Vejamos o que faríamos nessa situação.
+
+### Ao vencedor, os abacates
+Vamos explorar o último tópico seguindo esse exemplo simples, para o problema dos abacates - também simples.
 
 Uma possível solução seria esta:
 
 ```python
-
+print("Eu planto abacates.")
+print("Eu planto abacates.")
+print("Eu planto abacates.")
+print("Eu planto abacates.")
+print("Eu planto abacates.")
 ```
+
+Mas ela não me parece a mais eficiente - e, obviamente, se chegamos nesse ponto, _você_ já sabe que teremos
+uma solução melhor.
+
+O que usaremos para solucionar esse problema é uma capacidade fundamental dos computadores: _armazenar dados_,
+ainda que temporariamente.
+
+Para aqueles com baixa familiariedade com computação, os computadores são dotados de dispositivos de memória
+RAM, que vem do inglês _Random Access Memory_, ou Memória de Acesso Aleatório. Através deles, podemos armazenar
+e acessar dados de forma extremamente rápida, tendo esses deletados durante o tempo de execução do sistema
+operacional (a depender do tempo de vida de um processo ou aplicação) ou após o encerramente desse sistema.
+
+<details>
+  <summary>Curiosidade sobre a memória RAM</summary>
+  <p>Ainda que, em geral, os dados na RAM sejam destinados à execução de programas e processos, e sejam deletados
+  quando se interrompe o fornecimento de energia elétrica para o dispositivo de RAM - quando se desliga o computador
+   - algumas técnicas de perícia computacional permitem a recuperação de dados mesmo desses dispositivos de memória
+  volátil.</p>
+</details>
+
+Desse modo, vamos arranjar uma forma de 'guardar' e acessar nossa frase _"Eu planto abacates"_).
+
+Para isso, reflita comigo: se você tem, por exemplo, 3 filhos, e você quer que apenas um deles venha até a sala,
+o que você faz?
+
+Você o chama pelo nome, que irá então lhe dar acesso ao _valor_ a qual o nome está ligado - pobre Enzo, sempre
+aprontando.
+
+Uma variável é exatamente como Enzo - não fazendo bagunça na casa inteira, mas sim, um _identificador_ com um valor
+_atribuído_ a ele. Ao termos essa estrutura (um identificador associado a um valor), podemos constantemente 'chamar'
+esse identificador e acessar seu valor, para fazer seja lá o que precisamos de fazer com ele.
+
+Como isso se dá em Python? De forma simples: usando o _operador de atribuição_, que nada mais é que um símbolo pré-definido
+que mostra ao interpretador Python que _estamos ligando um valor a um identificador_, uma variável.
+
+Observe:
+
+```python
+# Arquivo: variavel.py
+meu_numero_favorito = 7
+print(meu_numero_favorito)
+```
+
+O resultado desse programa, naturalmente, é:
+
+<img src="https://github.com/Neblinus/Python-LBTM/blob/0fa4d40d64fd9a3f56c5b107d1ebd8c5b0902e20/M%C3%B3dulos%20de%20Conte%C3%BAdo/Imagens/Variavel.png" alt="Programa Python demonstrando variáveis">
+
+Nesse programa, temos a lógica básica das variáveis em funcionamento:
+
+* Definimos um identificador, nesse caso, `meu_numero_favorito`
+* Inserimos o _operador de atribuição_, um símbolo de 'igual' (`=`)
+* Inserimos o valor a ser atribuído a `meu_numero_favorito`, nesse caso, `7`
+
+
 
 ## Variáveis
 Até agora, só vimos literais em ação.<br>
