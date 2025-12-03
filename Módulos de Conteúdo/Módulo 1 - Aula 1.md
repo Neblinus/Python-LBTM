@@ -27,7 +27,9 @@ Veja a saída do programa:
 Mas nas entrelinhas desse código tão simples, teremos nosso primeiro aprendizado efetivo:<br>
 Compreenderemos o que são os _tipos de dados_.
 
-## Tipos de Dados
+---
+
+### Dados para todos
 O que ocorre é que, em computação, lidamos o tempo todo com dados: abrimos uma planilha `.xlsx` no Excel com vários
 números, editamos um documento `.docx` no Word repleto de palavras, ouvimos um áudio `.mp3` de uma música no celular...
 
