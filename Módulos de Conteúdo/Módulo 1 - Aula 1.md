@@ -353,7 +353,7 @@ ainda que temporariamente.
 Para aqueles com baixa familiariedade com computação, os computadores são dotados de dispositivos de memória
 RAM, que vem do inglês _Random Access Memory_, ou Memória de Acesso Aleatório. Através deles, podemos armazenar
 e acessar dados de forma extremamente rápida, tendo esses deletados durante o tempo de execução do sistema
-operacional (a depender do tempo de vida de um processo ou aplicação) ou após o encerramente desse sistema.
+operacional (a depender do tempo de vida de um processo ou aplicação) ou após o encerramento desse sistema.
 
 <details>
   <summary>Curiosidade sobre a memória RAM</summary>
