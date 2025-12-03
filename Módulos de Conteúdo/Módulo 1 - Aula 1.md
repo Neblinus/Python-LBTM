@@ -302,7 +302,37 @@ Como podemos ver, usamos `print` para imprimir um literal de string, e logo apó
 a _concatenação_ (explicarei futuramente) de dois literais de string: a primeira e a segunda frase.
 
 Agora, pense comigo: se você tivesse de escrever, num livro ou caderno, a primeira frase adicionada a uma frase aleatória,
-50 vezes, você ia _mesmo_ 
+50 vezes, você ia _mesmo_ escrever _"Eu sou uma frase"_ 50 vezes?<br>
+Na verdade, você provavelmente faria isso:
+
+> Eu sou uma frase e só queria poder dormir.<br>
+> // e não comprei Nutella hoje.<br>
+> // mas não sou pra ficar encarando.<br>
+> ...
+
+Se você é exemplar a ponto de perseverar ao longo de 50 frases assim, parabéns.
+
+O que nos importa aqui é que, em programação, devemos tentar construir soluções inteligentes.<br>
+Há inclusive um dizer nessa área, cuja estrutura exata não me recordo, que diz algo como:
+
+> O difícil não é resolver problemas complexos; é não adicionar mais complexidade a eles.
+
+Seres humanos que somos, especialmente no início da jornada de aprendizado de computação, é comum que,
+por falta de conhecimento de melhores práticas ou técnicas de DSA (aprenderemos mais à frente), acabemos por
+propôr soluções demasiadamente complexas para problemas que, ainda que longe de simples, poderiam ser
+resolvidos com maior facilidade.
+
+Até como pesquisadores, é difícil, muitas vezes, não se deixar levar pelo entusiasmo ou pela confiança em
+uma ideia, e acabar por criar uma solução à procura de um problema.
+
+Suponhamos que quiséssemos escrever um programa que imprimisse a frase _"Eu planto abacates"_ não 50,
+mas 5 vezes - para fins de brevidade.
+
+Uma possível solução seria esta:
+
+```python
+
+```
 
 ## Variáveis
 Até agora, só vimos literais em ação.<br>
