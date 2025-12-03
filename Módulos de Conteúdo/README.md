@@ -6,4 +6,4 @@ gerador do questionamento.<br>
 <br>Veja a seguir a lista de módulos; você pode acessá-los clicando no link em azul.
 
 ## Lista de Módulos
-* [1.1 - Introduzindo Python](https://github.com/Neblinus/BioPython/blob/main/M%C3%B3dulos%20de%20Conte%C3%BAdo/M%C3%B3dulo%201%20-%20Li%C3%A7%C3%A3o%201.1.md)
+* [1 - Tipos de Dados, Literais e Variáveis](https://github.com/Neblinus/Python-LBTM/blob/a4aa926c4c47f7c8c945667b4d7cf247ee3687fb/M%C3%B3dulos%20de%20Conte%C3%BAdo/M%C3%B3dulo%201%20-%20Aula%201.md)
