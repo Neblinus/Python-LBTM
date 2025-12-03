@@ -184,7 +184,7 @@ Veja o seguinte programa:
 
 ```python
 # Arquivo: tipos.py
-print(type("Olá, mundo!))
+print(type("Olá, mundo!"))
 print(type(10))
 ```
 
@@ -235,7 +235,8 @@ Reflita apenas sobre uma minúcia: _porquê digitamos `"Eu sou uma frase"` duas 
 Será que não poderíamos arranjar uma forma de evitar fazer o trabalho dobrado?<br>
 Qual seria a razão dessa repetição?
 
-A resposta é simples: não temos nenhuma forma de instruir o programa a usar essa frase _outra vez_.
+A resposta é simples: não temos nenhuma forma de instruir o programa a usar essa frase _outra vez_,
+então, tivemos de digitá-la novamente.
 
 ---
 
@@ -253,8 +254,21 @@ E o programa imprimia - exibia - o valor entre parênteses, ou o resultado do c�
 
 Ocorre que, a esses valores que inseríamos entre os parênteses, chamamos _**literais**_.
 
-Um _**literal**_ é qualquer valor que inserimos diretamente no código-fonte e que pode ser atribuído a uma variável
+Um _**literal**_ é qualquer valor fixo que inserimos diretamente no código-fonte e que pode ser atribuído a uma variável
 (veremos logo em seguida sobre elas).
+
+Ou seja, em um código como o seguinte, todos os valores entre os parênteses de `print` são literais, porquê foram
+inseridos diretamente no código e podem ser atribuídos a variáveis:
+
+```python
+print(175)             # Literal do tipo int (inteiro)
+print("Buenas noches") # Literal do tipo str (string)
+print(7.5)             # Literal do tipo float (número de ponto flutuante)
+print(10 * 10)         # Dois literais do tipo int (inteiro)
+# Etc, etc, etc
+```
+
+Todos esses valores são considerados literais, uma vez
 
 ### A especificação que faltava
 O que ocorre é que Python é uma linguagem de _tipagem dinâmica_.<br>
