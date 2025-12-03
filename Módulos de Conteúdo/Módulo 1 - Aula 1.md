@@ -268,53 +268,41 @@ print(10 * 10)         # Dois literais do tipo int (inteiro)
 # Etc, etc, etc
 ```
 
-Todos esses valores são considerados literais, uma vez
+Todos esses valores são considerados literais, uma vez que cumprem os requisitos para tal:
+* [x] São valores fixos
+* [x] Estão inseridos (digitados) diretamente no código
+* [x] Podem ser atribuídos a uma variável (aguarde...)
 
-### A especificação que faltava
-O que ocorre é que Python é uma linguagem de _tipagem dinâmica_.<br>
-Isso significa que os literais 
+Caso você tenha se perguntado o que seria o literal do tipo `float`, veja a definição abaixo:
 
+> [!TIP]
+> Objetos do tipo `float` representam números de ponto flutuante - uma vez que não há número fixo de algarismos
+> após o ponto.<br>
+> Por exemplo, poderíamos ter resultados de cálculos gerando `7.5`, `7.521`, `7.5023` ... por isso o nome `float`.<br>
+> Note que, em Python, usamos o ponto (`.`) como separador, não a vírgula.
 
-### Literais por toda a parte
-Olhe mais atentamente para o código do programa; você verá uma linha acinzentada e uma outra linha com diferentes colorizações.
-A linha acinzentada, iniciada em `#`, demarca um _comentário_, ou seja, um trecho do arquivo de código-fonte que será ignorado pelo
-interpretador Python - o software que nos permite executar ('rodar') os programas que desenvolvemos.
+Antes de prosseguirmos para falar das variáveis, note que todos esses literais possuem um tipo, uma classe.
 
-Por serem ignorados, os comentários são usados para explicar ou tornar mais claro um trecho de código, mas falaremos disso em outro
-momento.
+---
 
-Por agora, foque nessa linha em específico:
+### A preguiça melhora tudo
+Como seres humanos num padrão de vida estressante, num mundo (potencialmente) em colapso devido à glamourização da
+_produtividade_, é normal que a preguiça seja vista como algo ruim.<br>
+Nesse momento, ela será elevada ao status de _auxiliar de aprendizado_.
 
-```python
-print("Olá, mundo!")
-```
-
-Mesmo sem ainda termos elucidado algumas questões - tais como _'O que exatamente é `print`?_ - podemos notar que _print_, do inglês
-'imprimir' é o que faz a frase ser exibida na tela (mesmo que _como_ ele o faz ainda pareça um mistério).<br>
-Mas, se tudo em programação é composto de código, magia negra e termos ininteligíveis, o que é `"Olá, mundo!"`?
-
-Essa pequena frase entre aspas duplas é um **_literal_**.<br>
-Em programação, um **_literal_** é qualquer valor 'puro' diretamente escrito no código-fonte.
-
-No nosso simples programa, temos apenas um literal: `"Olá, mundo!"` - um valor diretamente escrito no código-fonte.<br>
-Retomando: literais são valores diretamente escritos no código-fonte.
-
-Ou seja, se tivermos um arquivo Python assim:
+Retome comigo aquele exemplo que citei no início da seção de _Literais e Variáveis_:
 
 ```python
-# Arquivo: exemplo_literais.py
-print("Bom dia")
-print(5)
-print(27.4)
-print("a")
+# Arquivo: frases.py
+print("Eu sou uma frase")
+print("Eu sou uma frase" + " e eu sou outra!")
 ```
 
-O que teremos é uma série de `print`s que imprimem literais: todos os valores entre parênteses no código acima são literais.
+Como podemos ver, usamos `print` para imprimir um literal de string, e logo após, para imprimir a soma, a junção,
+a _concatenação_ (explicarei futuramente) de dois literais de string: a primeira e a segunda frase.
 
-_Mas eles não são diferentes?_, você pode ter se perguntado...<br>
-Sim, eles são. Mas para explorar essa diferença, teremos primeiro que explorar um penúltimo tópico:
-
-As _variáveis_.
+Agora, pense comigo: se você tivesse de escrever, num livro ou caderno, a primeira frase adicionada a uma frase aleatória,
+50 vezes, você ia _mesmo_ 
 
 ## Variáveis
 Até agora, só vimos literais em ação.<br>
